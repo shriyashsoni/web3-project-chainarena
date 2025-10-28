@@ -1,7 +1,7 @@
 "use client"
 
 import { Canvas, useFrame } from "@react-three/fiber"
-import { OrbitControls, Environment, PerspectiveCamera, Float, Sparkles, Text3D } from "@react-three/drei"
+import { OrbitControls, Environment, PerspectiveCamera, Float, Sparkles } from "@react-three/drei"
 import { useRef, useState } from "react"
 import type * as THREE from "three"
 
@@ -120,6 +120,35 @@ function NFTPopup({ position }: { position: [number, number, number] }) {
   )
 }
 
+function VSIndicator() {
+  return (
+    <Float speed={2} rotationIntensity={0.2} floatIntensity={0.3}>
+      <group position={[0, 2, 0]}>
+        <mesh>
+          <torusGeometry args={[0.8, 0.1, 16, 32]} />
+          <meshStandardMaterial
+            color="#8b5cf6"
+            emissive="#8b5cf6"
+            emissiveIntensity={0.8}
+            metalness={1}
+            roughness={0}
+          />
+        </mesh>
+        <mesh position={[0, 0, 0]}>
+          <sphereGeometry args={[0.3, 32, 32]} />
+          <meshStandardMaterial
+            color="#ec4899"
+            emissive="#ec4899"
+            emissiveIntensity={0.8}
+            metalness={1}
+            roughness={0}
+          />
+        </mesh>
+      </group>
+    </Float>
+  )
+}
+
 export function Battle3DScene() {
   return (
     <div className="w-full h-full">
@@ -150,19 +179,8 @@ export function Battle3DScene() {
         <ParticleEffects />
         <NFTPopup position={[0, 3, 0]} />
 
-        {/* VS Text */}
-        <Float speed={2} rotationIntensity={0.2} floatIntensity={0.3}>
-          <Text3D font="/fonts/Inter_Bold.json" size={0.5} height={0.2} position={[-0.6, 2, 0]} rotation={[0, 0, 0]}>
-            VS
-            <meshStandardMaterial
-              color="#8b5cf6"
-              emissive="#8b5cf6"
-              emissiveIntensity={0.5}
-              metalness={1}
-              roughness={0}
-            />
-          </Text3D>
-        </Float>
+        {/* VS Indicator */}
+        <VSIndicator />
       </Canvas>
     </div>
   )
