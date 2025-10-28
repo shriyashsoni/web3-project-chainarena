@@ -11,7 +11,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Linera](https://img.shields.io/badge/Linera-Microchains-8B5CF6?style=for-the-badge)](https://linera.io/)
+[![Linera](https://img.shields.io/badge/Linera-Microchains-FF4500?style=for-the-badge)](https://linera.io/)
 
 [🎮 Live Demo](https://chainarena.vercel.app) • [📖 Documentation](https://docs.chainarena.io) • [💬 Discord](https://discord.gg/chainarena) • [🐦 Twitter](https://twitter.com/chainarena)
 
@@ -21,11 +21,22 @@
 
 ## 🌟 Overview
 
-**ChainArena** is a next-generation blockchain gaming platform built on Linera microchains, delivering real-time PvP battles with instant finality, deterministic gameplay, and seamless NFT rewards. Experience the future of on-chain gaming with zero gas fees and sub-50ms latency.
+**ChainArena** is a next-generation blockchain gaming platform **built on Linera microchains**, delivering real-time PvP battles with instant finality, deterministic gameplay, and seamless NFT rewards. Experience the future of on-chain gaming with zero gas fees and sub-50ms latency.
+
+### ⚡ Why Linera?
+
+ChainArena leverages **Linera's revolutionary microchain architecture** to deliver:
+
+- 🚀 **Sub-50ms Block Finality** - Instant transaction confirmation for real-time gameplay
+- 💸 **Zero Gas Fees** - Play without worrying about transaction costs
+- 🔗 **Elastic Scaling** - Dedicated microchains per match for unlimited scalability
+- 🔒 **Deterministic State Machines** - Provably fair gameplay with verifiable outcomes
+- ⚡ **WebAssembly Smart Contracts** - High-performance game logic execution
+- 🌐 **Cross-Chain Interoperability** - Seamless asset transfers across chains
 
 ### ✨ Key Features
 
-- ⚡ **Instant Gameplay** - Real-time PvP battles with <50ms latency
+- ⚡ **Instant Gameplay** - Real-time PvP battles with <50ms latency powered by Linera
 - 🎮 **Turn-Based Combat** - Strategic gameplay with attack, defend, and special moves
 - 🏆 **NFT Rewards** - Earn unique NFTs for victories and achievements
 - 💰 **Wager System** - Stake tokens and compete for rewards
@@ -41,25 +52,27 @@
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **Framework:** Next.js 16 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4
-- **UI Components:** shadcn/ui
-- **3D Graphics:** React Three Fiber + Three.js
-- **Animations:** Framer Motion
-- **State Management:** React Context + SWR
+- **Framework:** Next.js 16 (App Router) ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat&logo=next.js)
+- **Language:** TypeScript ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+- **Styling:** Tailwind CSS v4 ![Tailwind](https://img.shields.io/badge/-Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+- **UI Components:** shadcn/ui ![shadcn](https://img.shields.io/badge/-shadcn/ui-000000?style=flat)
+- **3D Graphics:** React Three Fiber + Three.js ![Three.js](https://img.shields.io/badge/-Three.js-000000?style=flat&logo=three.js)
+- **Animations:** Framer Motion ![Framer](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat&logo=framer)
+- **State Management:** React Context + SWR ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black)
 
-### Blockchain
-- **Platform:** Linera Microchains
-- **Smart Contracts:** Rust + Linera SDK
-- **Wallet Integration:** Web3.js / Ethers.js
-- **NFT Standard:** ERC-721 compatible
+### Blockchain - Built on Linera
+- **Platform:** Linera Microchains ![Linera](https://img.shields.io/badge/-Linera-FF4500?style=flat)
+- **Smart Contracts:** Rust + Linera SDK ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat&logo=rust)
+- **Wallet Integration:** Web3.js / Ethers.js ![Web3](https://img.shields.io/badge/-Web3.js-F16822?style=flat&logo=web3.js)
+- **NFT Standard:** ERC-721 compatible on Linera
+- **Architecture:** Microchain per match for elastic scaling
+- **Consensus:** Byzantine Fault Tolerant (BFT)
 
 ### Backend (Optional)
-- **API:** GraphQL / REST
-- **Database:** PostgreSQL
-- **Indexer:** Event stream processing
-- **Caching:** Redis
+- **API:** GraphQL / REST ![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=flat&logo=graphql)
+- **Database:** PostgreSQL ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+- **Indexer:** Event stream processing for Linera events
+- **Caching:** Redis ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=flat&logo=redis&logoColor=white)
 
 ---
 
@@ -69,7 +82,8 @@
 
 - Node.js 18+ and npm/yarn/pnpm
 - Git
-- A Web3 wallet (MetaMask, Coinbase Wallet, etc.)
+- A Web3 wallet (MetaMask, Coinbase Wallet, or Linera Wallet)
+- Linera CLI (for smart contract deployment)
 
 ### Installation
 
@@ -98,6 +112,7 @@ Edit `.env.local` with your configuration:
 # Linera Configuration
 NEXT_PUBLIC_LINERA_RPC_URL=https://rpc.linera.io
 NEXT_PUBLIC_LINERA_CHAIN_ID=your_chain_id
+NEXT_PUBLIC_LINERA_NETWORK=testnet
 
 # Wallet Configuration
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id
@@ -118,6 +133,51 @@ pnpm dev
 
 5. **Open your browser**
 Navigate to [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🔗 Linera Integration
+
+ChainArena is **built entirely on Linera microchains**, leveraging the following technologies:
+
+### Smart Contract Architecture
+\`\`\`
+contracts/
+├── game_contract/          # Main game logic on Linera
+│   ├── src/
+│   │   ├── lib.rs         # Game state machine
+│   │   ├── state.rs       # Match state management
+│   │   └── operations.rs  # Move validation & execution
+│   └── Cargo.toml
+├── nft_app/               # NFT minting on Linera
+│   ├── src/
+│   │   ├── lib.rs         # NFT contract
+│   │   └── metadata.rs    # NFT metadata handling
+│   └── Cargo.toml
+└── token_app/             # Token transfers on Linera
+    └── src/
+        └── lib.rs         # Wager & reward distribution
+\`\`\`
+
+### Linera Features Used
+- ⚡ **Microchain per Match** - Each game creates a temporary microchain for isolated state
+- 🔄 **Cross-Chain Messages** - NFT rewards sent to player's main chain
+- 📊 **GraphQL Subscriptions** - Real-time game state updates
+- 🔐 **Deterministic Execution** - Guaranteed fair gameplay
+- 💾 **Persistent Storage** - Match history and player stats
+
+### Deployment to Linera
+\`\`\`bash
+# Build smart contracts
+cd contracts/game_contract
+cargo build --release --target wasm32-unknown-unknown
+
+# Deploy to Linera testnet
+linera project publish --chain-id $CHAIN_ID
+
+# Initialize game application
+linera application create --chain-id $CHAIN_ID --bytecode game_contract.wasm
+\`\`\`
 
 ---
 
@@ -211,6 +271,7 @@ npm run deploy       # Deploy to Vercel
 |----------|-------------|----------|
 | `NEXT_PUBLIC_LINERA_RPC_URL` | Linera RPC endpoint | ✅ |
 | `NEXT_PUBLIC_LINERA_CHAIN_ID` | Linera chain ID | ✅ |
+| `NEXT_PUBLIC_LINERA_NETWORK` | Linera network (e.g., testnet) | ✅ |
 | `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` | WalletConnect project ID | ✅ |
 | `DATABASE_URL` | PostgreSQL connection string | ❌ |
 | `REDIS_URL` | Redis connection string | ❌ |
@@ -278,19 +339,21 @@ Built with ❤️ by the ChainArena team
 
 ## 🙏 Acknowledgments
 
-- [Linera](https://linera.io) - For the revolutionary microchain technology
+- **[Linera](https://linera.io)** ![Linera](https://img.shields.io/badge/-Linera-FF4500?style=flat) - For the revolutionary microchain technology that powers ChainArena
 - [Vercel](https://vercel.com) - For hosting and deployment
 - [shadcn/ui](https://ui.shadcn.com) - For beautiful UI components
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) - For 3D graphics
+- **Linera Community** - For support and feedback during development
 
 ---
 
-## 📊 Stats
+## 📚 Learn More About Linera
 
-![GitHub stars](https://img.shields.io/github/stars/chainarena/chainarena?style=social)
-![GitHub forks](https://img.shields.io/github/forks/chainarena/chainarena?style=social)
-![GitHub issues](https://img.shields.io/github/issues/chainarena/chainarena)
-![GitHub license](https://img.shields.io/github/license/chainarena/chainarena)
+- **Official Website:** [https://linera.io](https://linera.io)
+- **Documentation:** [https://docs.linera.io](https://docs.linera.io)
+- **GitHub:** [https://github.com/linera-io](https://github.com/linera-io)
+- **Discord:** [https://discord.gg/linera](https://discord.gg/linera)
+- **Buildathon:** [https://linera.io/buildathon](https://linera.io/buildathon)
 
 ---
 

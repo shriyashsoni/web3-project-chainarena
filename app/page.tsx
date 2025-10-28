@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Swords, Zap, Trophy, Shield, Coins, Users } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Battle3DScene } from "@/components/battle-3d-scene"
 
 export default function HomePage() {
@@ -16,9 +17,14 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Section - Text Content */}
             <div className="space-y-8 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-950/50 border border-purple-500/30 text-purple-300 text-sm font-medium shadow-sm">
-                <Zap className="w-4 h-4" />
-                Powered by Linera Microchains
+              <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-purple-950/50 to-blue-950/50 border border-purple-500/30 text-purple-300 text-sm font-medium shadow-lg backdrop-blur-sm">
+                <Image src="/linera-logo.png" alt="Linera" width={20} height={20} className="w-5 h-5" />
+                <span className="flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  Built on Linera Microchains
+                </span>
+                <div className="h-4 w-px bg-purple-500/30" />
+                <span className="text-xs text-purple-400">Sub-50ms Finality</span>
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight text-white">
@@ -243,8 +249,30 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-purple-500/20 text-center text-sm text-gray-400">
-            <p>Built for Linera Buildathon 2025. Powered by Linera Microchains.</p>
+          <div className="mt-12 pt-8 border-t border-purple-500/20">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-sm text-gray-400">
+                <Image src="/linera-logo.png" alt="Linera" width={24} height={24} className="w-6 h-6" />
+                <span>
+                  Built for Linera Buildathon 2025 •{" "}
+                  <span className="text-purple-400 font-medium">Powered by Linera Microchains</span>
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-xs text-gray-500">
+                <span className="flex items-center gap-1">
+                  <Zap className="w-3 h-3 text-purple-400" />
+                  Instant Finality
+                </span>
+                <span className="flex items-center gap-1">
+                  <Shield className="w-3 h-3 text-cyan-400" />
+                  Zero Gas Fees
+                </span>
+                <span className="flex items-center gap-1">
+                  <Trophy className="w-3 h-3 text-green-400" />
+                  On-Chain Gaming
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
