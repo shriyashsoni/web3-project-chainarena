@@ -320,11 +320,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **Website:** [https://chainarena.io](https://chainarena.io)
-- **Documentation:** [https://docs.chainarena.io](https://docs.chainarena.io)
-- **Discord:** [https://discord.gg/chainarena](https://discord.gg/chainarena)
-- **Twitter:** [https://twitter.com/chainarena](https://twitter.com/chainarena)
-- **GitHub:** [https://github.com/chainarena](https://github.com/chainarena)
+- **Website:** [https://chainarena.io](https://chainarenalinera.vercel.app/)
+- **Documentation:** [https://docs.chainarena.io](- **Documentation:** (https://chainarenalinera.vercel.app/whitepaper)
+
 
 ---
 
